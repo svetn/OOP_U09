@@ -41,7 +41,16 @@ int main()
 		{
 			for(int i=0;i<number;i++)
 			{
+				if (CRectangle* rec = dynamic_cast<CRectangle*>(figure[i]))
+				{
+					std::cout << "Rectangle: " << std::endl;
+				}
+				else
+				{
+					std::cout << "Triangle: " << std::endl;
+				}
 				figure[i]->display_data();
+				std::cout<<std::endl;
 			}
 			break;
 		}
